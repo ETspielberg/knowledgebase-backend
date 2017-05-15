@@ -2,11 +2,11 @@ package unidue.ub.knowledgebase.backend;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.xml.bind.annotation.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -77,15 +77,15 @@ public class PublicationAuthor {
     @XmlElement
     private String linkHomepage;
 
-    @Lob
+    @Column(columnDefinition = "TEXT")
     @XmlElement
     private String foundInDatabase;
 
-    @Lob
+    @Column(columnDefinition = "TEXT")
     @XmlElement
     private String comment;
 
-    @Lob
+    @Column(columnDefinition = "TEXT")
     @XmlElement
     private String keywords;
 
